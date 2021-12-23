@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { uuid } from 'uuidv4';
 import './App.css';
 import AddProduct from './AddProduct';
@@ -34,8 +35,16 @@ function App() {
   return (
     <div className='container'>
       <Header/>
-      <AddProduct AddProductHandler={AddProductHandler}/>
-      <ProductList products={products} getproductId={ removeproductHandler }/>
+        <Routes>
+          
+            <Route path="/add" exact element={<AddProduct AddProductHandler={AddProductHandler}/>}></Route>
+
+            <Route path="/" exact element={<ProductList products={products} getproductId={ removeproductHandler }/>}></Route>
+          {/* <AddProduct AddProductHandler={AddProductHandler}/>
+          <ProductList products={products} getproductId={ removeproductHandler }/> */}
+        </Routes>
+      
+      
     </div>
   );
 }

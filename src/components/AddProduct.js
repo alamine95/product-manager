@@ -2,6 +2,7 @@ import React from 'react';
 
 class AddProduct extends React.Component {
     state = {
+        id: "",
         nom: "",
         prix: "",
         description: "",
