@@ -24,17 +24,12 @@ const ProductList = (props) => {
                 <Outlet />
                 </div>
             </div>
-            <table className="table mt-3">
-                <thead className="thead-primary">
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>{renderProductList}</tbody>
-            </table>
+            <div class="row pb-5 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  {renderProductList}
+                </div>
+            </div>
+
         </div>
     );
 };

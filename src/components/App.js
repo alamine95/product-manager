@@ -37,7 +37,10 @@ function App() {
       <Header/>
         <Routes>
           
-            <Route path="/add" exact element={<AddProduct AddProductHandler={AddProductHandler}/>}></Route>
+            <Route path="/add" exact
+             element={<AddProduct AddProductHandler={AddProductHandler}/>}
+             >  
+             </Route>
 
             <Route path="/" exact element={<ProductList products={products} getproductId={ removeproductHandler }/>}></Route>
           {/* <AddProduct AddProductHandler={AddProductHandler}/>
